@@ -1,38 +1,212 @@
 .App {
   text-align: center;
+  background-color: #FFFFFF;
+  color: #707070;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*Header*/
+.header-container {
+  height: 82px;
+  background-color: #838992;
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  max-width: 121px;
+  max-height: 35px;
+  position: absolute;
+  top: 24px;
+  left: 36px;
 }
+/*Header End*/
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*Second Header*/
+.back {
+  max-width: 24px;
+  max-height: 24px;
+  position: absolute;
+  top: 29px;
+  bottom: 29px;
+  left: 36px;
+}
+.search {
+  max-width: 22px;
+  max-height: 22px;
+  position: absolute;
+  top: 29px;
+  right: 37px;
+  bottom: 29px;
+}
+/*Second Header End*/
+
+/*Main*/
+/*Homepage*/
+.main-section {
+  background-color: #F9F9F9;
+  position: relative;
+}
+.both {
+  position: absolute;
+  top: 39px;
+  left: 24px;
+  right: 24px;
+  min-height: 110px;
+  min-width: 320px;
+}
+.space-bottom {
+  margin-bottom: 19px;
+  cursor: pointer;
+}
+.card {
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: left;
+  color: #707070 !important;
+}
+div.card {
+  border-radius: 10px;
+  border-left: 15px solid #C5C5C5;
+  min-height: 110px;
+}
+.card.active { 
+  border-left: 15px solid #687487;
+}
+.card-title {
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: left;
+  max-width: 261px;
+  max-height: 19px;
+}
+.content {
+  position: absolute;
+  top: 80px;
+  max-width: 358px;
+}
+span.day {
+  min-width: 215px;
+}
+/*Homepage End*/
+/*Second Screen*/
+/*Menu*/
+.nav-menu {
+  background-color: #F9F9F9;
+  padding: 10px 0;
+}
+a.nav-link {
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+}
+div.container {
+  border-bottom: 2px solid #C5C5C5;
+}
+.underlined {
+  border-bottom: 2px solid #838992;
+}
+/*Menu End*/
+/*Accordion*/
+div.accordion {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  top: 65px;
+  left: 36px;
+  right: 36px;
+  bottom: 122pt;
+  max-height: calc(100vh - 300px);
+}
+h2.accordion:focus {
+  box-shadow: none;
+}
+div.accordion-card {
+  border-radius: 0px;
+  border-left: 0;
+  min-height: 67px;
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: left;
+  color: #707070 !important;
+}
+.accordion-card-title {
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 0;
+  line-height: 15px;
+  text-align: left;
+  color: #707070 !important;
+}
+.accordion-card-body {
+  min-height: 67px;
+}
+button.accordion-button {
+  background-color: #838992 !important;
+  color: white !important;
+  font-family: 'Fira Sans, Extra Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 19px;
+  text-align: left;
+}
+button.accordion-button:focus {
+  box-shadow: none !important;
+}
+div.accordion-body {
+  padding: 0;
+}
+.accordion-body > div {
+  border-bottom: 1px solid #C5C5C5;
+}
+/*Accordion End*/
+/*Second Screen End*/
+/*Main End*/
+
+/*Footer*/
+.footer-container {
+  height: 128px;
+  background-color: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.box {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.box button {
+  border-top: 3px solid #C5C5C5;
+  border-radius: 3px;
 }
+.active-button {
+  border-top: 4px solid #838992 !important;
+}
+.right-button {
+  max-width: 22px;
+  max-height: 24px;
+  position: absolute;
+  bottom: 52px;
+}
+.left-button {
+  max-width: 25px;
+  max-height: 20px;
+  position: absolute;
+  bottom: 54px;
+}
+/*Footer End*/
