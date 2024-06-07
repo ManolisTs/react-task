@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import Image from 'react-bootstrap/esm/Image';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -11,8 +11,12 @@ function Homepage() {
 
     const goSecondScreen = async () => {
         try {
-            const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events');
-            const events = response.data.data.filter(event => 
+            const response = await fetch('http://testlc.lncdoo.com/api/myprofile/events');
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            const events = data.data.filter(event => 
                 event.is_inclass && 
                 event.summary.some(item => item.title === "Wednesdays, Thursdays & Fridays" && item.section === "date")
             );
@@ -21,6 +25,7 @@ function Homepage() {
             console.error('Error fetching events:', error);
         }
     };
+    
 
     return (
         <>
