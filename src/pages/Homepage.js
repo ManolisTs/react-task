@@ -12,11 +12,14 @@ function Homepage() {
     const goSecondScreen = async () => {
         try {
             const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events');
-            const events = response.data.data.filter(event => 
-                event.is_inclass && 
-                event.summary.some(item => item.title === "Wednesdays, Thursdays & Fridays" && item.section === "date")
-            );
-            navigate('/second', { state: { events } });
+            if (response.data.success) {
+                const events = response.data.data.filter(event => 
+                    event.is_inclass && event.date === "Wednesdays, Thursdays & Fridays"
+                );
+                navigate('/second', { state: { events } });
+            } else {
+                console.error('Error: API request failed');
+            }
         } catch (error) {
             console.error('Error fetching events:', error);
         }
