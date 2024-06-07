@@ -5,11 +5,8 @@ import Footer from '../components/Footer';
 import Accordion from 'react-bootstrap/Accordion';
 import Menu from '../components/Menu';
 import Image from 'react-bootstrap/esm/Image';
-import goSecondScreen from '../pages/Homepage'
 
 function SecondScreen() {
-
-    goSecondScreen();
 
     const location = useLocation();
 

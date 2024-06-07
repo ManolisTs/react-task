@@ -12,7 +12,6 @@ function Homepage() {
     const goSecondScreen = async () => {
         try {
             const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events');
-            response.data.success = true;
             if (response.data.success) {
                 const events = response.data.data.filter(event => 
                     event.is_inclass && event.date === "Wednesdays, Thursdays & Fridays"
