@@ -11,7 +11,14 @@ function Homepage() {
 
     const goSecondScreen = async () => {
         try {
-            const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events');
+            const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events', {
+                headers: {
+                    'x-vercel-protection-bypass': 'D6VWhXlB80RuEtVQANIqPq0swWmNax8U'
+                },
+                params: {
+                    'x-vercel-protection-bypass': 'D6VWhXlB80RuEtVQANIqPq0swWmNax8U'
+                }
+            });
             const events = response.data.data.filter(event => 
                 event.is_inclass && 
                 event.summary.some(item => item.title === "Wednesdays, Thursdays & Fridays" && item.section === "date")
