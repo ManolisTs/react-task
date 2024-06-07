@@ -14,7 +14,7 @@ function Homepage() {
             const response = await axios.get('http://testlc.lncdoo.com/api/myprofile/events');
             const events = response.data.data.filter(event => 
                 event.is_inclass && 
-                event.summary.some(item => item.title === "Wednesdays, Thursdays & Fridays" && item.section === "date")
+                event.summary.some(item => item.title === "Wednesdays, Thursdays & Fridays")
             );
             navigate('/second', { state: { events } });
         } catch (error) {
